@@ -1,0 +1,7 @@
+Cron settings.
+
+On the owncloud server: (this will run the du script every 15 minutes and put the results in /tmp/quota on the owncloud server)
+*/15  *  *  *  *  php -f /var/www/du.php >/tmp/quota
+
+on the nagios server (This will copy the data from the owncloud server to nagios /tmp, you will need ssh-keys for this to work)
+*/15 * * * * scp <user>@owncloud-server-name:/tmp/quota /tmp/quota-owncloud
