@@ -3,7 +3,7 @@ Owncloud-nagios
 Nagios monitoring of owncloud on linux
 
 This plugin was written to monitor statistics from Owncloud in nagios.
-Working on:
+first-release:
 	- Quota limit / user and space utilisation
 
 howto:
@@ -15,6 +15,9 @@ howto:
 - edit <nagios>/etc/objects/commands.cfg and add the commands specified in the provided commands.cfg
 - edit <nagios>/etc/objects/owncloud-server-file.cfg and add a definition for each user, as illustrated in the provided user.cfg
   -	this may also be scripted with a bash-for loop (as i have done considering the many users i have on owncloud)
+
+
+
 
 
 (TESTERS NEEDED)
