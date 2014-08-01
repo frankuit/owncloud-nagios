@@ -12,7 +12,7 @@ $dbhandle = mysql_connect($hostname, $username, $password)
 $selected = mysql_select_db($database, $dbhandle)
   or die("Could not select owncloud");
 //execute the SQL query and return records
-$allusers = mysql_query("select distinct userid from oc_preferences where configkey = 'cache_version' ;");
+$allusers = mysql_query("select distinct userid from oc_preferences where configkey = 'firstLoginAccomplished' ;");
 while ($row = mysql_fetch_array($allusers)) {
 	$allus = $row{'userid'};
 

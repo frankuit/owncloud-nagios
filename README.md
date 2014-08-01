@@ -17,6 +17,7 @@ howto:
   -	this may also be scripted with a bash-for loop (as i have done considering the many users i have on owncloud)
 
 
+(Updated for owncloud server v 7.0)
 
 
 
