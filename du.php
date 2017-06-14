@@ -1,9 +1,10 @@
 <?php
-$username = "mysql";
-$password = "passwd";
+// parameters to be configured
+$username = "owcncloud";
+$password = "p455w0rd";
 $hostname = "localhost"; 
 $database = "owncloud";
-$location = "/mnt/owncloud/owncloud/"; //Change this to the location where userdirs are located on your owncloud linux server
+$location = "/var/www/owncloud/data/"; // do not remove the trailing backslash
 
 //connection to the database
 $dbhandle = mysql_connect($hostname, $username, $password)
@@ -12,7 +13,7 @@ $dbhandle = mysql_connect($hostname, $username, $password)
 $selected = mysql_select_db($database, $dbhandle)
   or die("Could not select owncloud");
 //execute the SQL query and return records
-$allusers = mysql_query("select distinct userid from oc_preferences where configkey = 'firstLoginAccomplished' ;");
+$allusers = mysql_query("select distinct userid from oc_preferences where configkey = 'lastLogin' ;");
 while ($row = mysql_fetch_array($allusers)) {
 	$allus = $row{'userid'};
 
